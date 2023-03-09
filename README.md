@@ -1,5 +1,6 @@
 # usage
   ./Assembler.sh <assembly file> to assemble the file
+  
   ./Assembler.sh to launch the manual assembler
   
 # requirements
