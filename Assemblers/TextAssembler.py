@@ -36,7 +36,7 @@ while WordInput != "done":
 			print (color.white + "Type " + color.green + "\"sol\"" + color.white + " to stop the program counter and stay on 5he current line")
 			print (color.white + "Type " + color.green + "\"jmp\"" + color.white + " to unconditionally jump to the selected line")
 			print (color.white + "Type " + color.green + "\"cmp\"" + color.white + " to compare A and B")
-			print (color.white + "Type " + color.green + "\"dor\"" + color.white + " to return to the line after the " + color.green + "\"rad\"" + color.white + " instruction")
+			print (color.white + "Type " + color.green + "\"return\"" + color.white + " to return to the line after the " + color.green + "\"rad\"" + color.white + " instruction")
 			print (color.white + "Type " + color.green + "\"ldr\"" + color.white + " to read the result of the current or last calculation")
 			print (color.white + "Type " + color.green + "\"lda\"" + color.white + " to read the selected register as A")
 			print (color.white + "Type " + color.green + "\"ldb\"" + color.white + " to read the selected register as B")
@@ -192,8 +192,8 @@ while WordInput != "done":
 		case "cmp":
 			print("If A=B")
 			InstructionString = InstructionString + "R7 "
-		case "dor":
-			print("Doom Returnal")
+		case "return":
+			print("Return")
 			InstructionString = InstructionString + "R8 "
 		case "rad":
 			print("Jump To Return Address")
