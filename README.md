@@ -1,5 +1,5 @@
 # usage
-  ./Assembler.sh <assembly file> to assemble the file
+  ./Assembler.sh your file to assemble the file
   
   ./Assembler.sh to launch the manual assembler
   
@@ -11,7 +11,7 @@
     
     1) locate the instruction name you want to change in the assemblers (example jmp on line 194 in the file assembler)
     
-    2) change case "jmp": to case "<your instruction name>": (example case "goto":)
+    2) change case "jmp": to case "your instruction name": (example case "goto":)
     
     3) do the same changes to the other assembler
 
@@ -19,6 +19,6 @@
     
     1) locate the instruction you want to change (example out)
     
-    2)change InstructionString = InstructionString + "L15 " to InstructionString = InstructionString + "<your output instruction> " (example InstructionString = InstructionString + "R10 ")
+    2)change InstructionString = InstructionString + "L15 " to InstructionString = InstructionString + "your output instruction " (example InstructionString = InstructionString + "R10 ")
      
     3) do the same changes to the other assembler
