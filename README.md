@@ -1,5 +1,5 @@
 # usage
-  ./Assembler.sh your file to assemble the file
+  ./Assembler.sh YOURFILE to assemble the file (your file cant have a space in it)
   
   ./Assembler.sh to launch the manual assembler
   
