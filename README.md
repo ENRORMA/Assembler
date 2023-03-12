@@ -1,3 +1,5 @@
+IMPORTANT: do not use this assembler or write code for it, its not finished and thing might be changed (this line will be removed when the assembler is done)
+
 # usage
   ./Assembler.sh YOURFILE to assemble the file (your file cant have a space in it)
   
