@@ -64,7 +64,7 @@ while True:
 			print (color.white + "Type " + color.green + "\"set\"" + color.white + " to write a number to the selected register")
 			print (color.white + "Type " + color.green + "\"uin\"" + color.white + " to enable the user input and turn on the input light")
 			print (color.white + "Type " + color.green + "\"out\"" + color.white + " to output a integer")
-			print (color.white + "Type " + color.green + "\"sol\"" + color.white + " to stop the program counter and stay on 5he current line")
+			print (color.white + "Type " + color.green + "\"stop\"" + color.white + " to stop the program counter and stay on the current line")
 			print (color.white + "Type " + color.green + "\"jmp\"" + color.white + " to unconditionally jump to the selected line")
 			print (color.white + "Type " + color.green + "\"cmp\"" + color.white + " to compare A and B")
 			print (color.white + "Type " + color.green + "\"push\"" + color.white + " to jump to the selected location and save a return address")
@@ -189,8 +189,8 @@ while True:
 		case "out":
 			print("Output")
 			InstructionString = InstructionString + "L15 "
-		case "sol":
-			print("Stay On Line")
+		case "stop":
+			print("stop the computer")
 			InstructionString = InstructionString + "L16 "
 		case "jmp":
 			print("Jump")
