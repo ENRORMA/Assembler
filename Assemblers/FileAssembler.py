@@ -190,7 +190,7 @@ while True:
 			print("Output")
 			InstructionString = InstructionString + "L15 "
 		case "stop":
-			print("stop the computer")
+			print("stop the program counter")
 			InstructionString = InstructionString + "L16 "
 		case "jmp":
 			print("Jump")
