@@ -1,6 +1,7 @@
 #!/bin/bash
-if [[ "$1" == "" ]] ; then
-python Assemblers/TextAssembler.py
+SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
+if [ "$1" == "" ]; then
+  python "$SCRIPT_PATH/Assemblers/TextAssembler.py"
 else
-python Assemblers/FileAssembler.py $1
+  python "$SCRIPT_PATH/Assemblers/FileAssembler.py" $1
 fi
