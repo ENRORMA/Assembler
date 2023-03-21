@@ -23,6 +23,8 @@ with open(FileName , "r") as file:
 	File = file.read()
 print (File)
 
+File = File.lower()
+
 InstructionLetter = File[0:1]
 
 #print with colors
