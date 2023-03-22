@@ -18,6 +18,7 @@ print(color.green + "type \"help\" for help" + color.white)
 while WordInput != "done":
 	WordInput = input("Input Instruction Word: ")
 	match WordInput:
+		WordInput = WordInput.lower()
 		case "done":
 			print(color.green + "Done" + color.white)
 			print("")
