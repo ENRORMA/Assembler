@@ -104,8 +104,8 @@ while WordInput != "done":
 			else:
 				print(color.red + "Number Is Too Big, Exiting LDF" + color.white)
 			BitString = ""
-		case "cin":
-			print("Carry In")
+		case "inc":
+			print("Increment")
 			InstructionString = InstructionString + "L9 "
 		case "inv":
 			print("Invert A")
