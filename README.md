@@ -1,9 +1,9 @@
 IMPORTANT: do not use this assembler or write code for it, its not finished and things might be changed (this line will be removed when the assembler is done)
 
 # usage
-  ./Assembler.sh YOURFILE to assemble the file (your file cant have a space in it)
+  bash Assembler.sh YOURFILE to assemble the file (your file cant have a space in it)
   
-  ./Assembler.sh to launch the manual assembler
+  bash Assembler.sh to launch the manual assembler
   
 # requirements
   python 3.11.1 (might work on earlier versions but i tested it on 3.11.1)
