@@ -13,7 +13,7 @@ class color:
 	green = "\033[1;32;40m"
 	white = "\033[1;37;0m"
 
-print(color.green + "type \"help\" for help" + color.white)
+print(color.white + "type " + color.green + "\"help\"" + color.white + " for help")
 
 while WordInput != "done":
 	WordInput = input("Input Instruction Word: ")

@@ -33,16 +33,13 @@ class color:
 	green = "\033[1;32;40m"
 	white = "\033[1;37;0m"
 
-print(color.green + "type \"help\" for help" + color.white)
-
-
-File = File.replace("\n" , " ")
+print(color.white + "type " + color.green + "\"help\"" + color.white + " for help")
 
 while True:
 	if Executed == True:
 		File = File[1:1000000000000000]
 		InstructionLetter = File[0:1]
-	while InstructionLetter != " " and InstructionLetter != "":
+	while InstructionLetter != " " and InstructionLetter != "" and InstructionLetter != "\n":
 		InstructionInput = InstructionInput + InstructionLetter
 		File = File[1:1000000000000000]
 		InstructionLetter = File[0:1]
