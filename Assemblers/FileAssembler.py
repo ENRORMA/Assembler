@@ -1,4 +1,3 @@
-#!/bin/python3
 #python 3.11.1
 
 import sys
@@ -33,7 +32,7 @@ class color:
 	green = "\033[1;32;40m"
 	white = "\033[1;37;0m"
 
-print(color.white + "type " + color.green + "\"help\"" + color.white + " for help")
+print (color.white + "type " + color.green + "\"help\"" + color.white + " for help")
 
 while True:
 	if Executed == True:
@@ -48,16 +47,20 @@ while True:
 	InstructionInput = ""
 	match WordInput:
 		case "done":
-			print(color.green + "Done" + color.white)
-			print("")
-			print(InstructionString)
+			print (color.green + "Done" + color.white)
+			print ("")
+			if UnknownInstructions > 0:
+				print (color.red + "Errors: " , UnknownInstructions , color.white)
+				print (color.red + "the amount of errors might not be the amount of mistakes in your code Example:" + color.white)
+				print (color.red + "if you type \"hmp\" instead of \"jmp\" the instruction will not be recognized and you will get an error but you will also get an error for the number after the jump instruction" + color.white)
+			print (InstructionString)
 			break
 		case "help":
 			print (color.white + "Type " + color.green + "\"done\"" + color.white + " to exit and print the Assembled code")
 			print (color.white + "Type " + color.green + "\"help\"" + color.white + " to display this message")
 			print (color.white + "Type " + color.green + "\"view\"" + color.white + " to print the assembled code")
 			print (color.white + "Type " + color.green + "\";\"" + color.white + " to write a new line")
-			print (color.white + "Type " + color.green + "\"ldf\"" + color.white + " to load force a integer")
+			print (color.white + "Type " + color.green + "\"inlude\"" + color.white + " to load an unsigned integer integer")
 			print (color.white + "Type " + color.green + "\"inc\"" + color.white + " to increment a number (carry in)")
 			print (color.white + "Type " + color.green + "\"inv\"" + color.white + " to invert A")
 			print (color.white + "Type " + color.green + "\"set\"" + color.white + " to write a number to the selected register")
@@ -72,12 +75,12 @@ while True:
 			print (color.white + "Type " + color.green + "\"lda\"" + color.white + " to read the selected register as A")
 			print (color.white + "Type " + color.green + "\"ldb\"" + color.white + " to read the selected register as B")
 		case "view":
-			print(InstructionString)
+			print (InstructionString)
 		case ";":
-			print("New Line")
+			print ("New Line")
 			InstructionString = InstructionString + "\n"
-		case "ldf":
-			print("Load")
+		case "include":
+			print ("Load")
 			if Executed == True:
 				File = File[1:1000000000000000]
 				InstructionLetter = File[0:1]
@@ -137,18 +140,18 @@ while True:
 					InstructionString = InstructionString + "L1 "
 				else:
 					BitString = BitString + "0"
-				print(BitString)
+				print (BitString)
 			else:
-				print(color.red + "Number Is Too Big, Exiting LDF" + color.white)
+				print (color.red + "Number Is Too Big, Exiting include" + color.white)
 			BitString = ""
 		case "inc":
-			print("Increment")
+			print ("Increment")
 			InstructionString = InstructionString + "L9 "
 		case "inv":
-			print("Invert A")
+			print ("Invert A")
 			InstructionString = InstructionString + "L10 "
 		case "set":
-			print("Write")
+			print ("Write")
 			if Executed == True:
 				File = File[1:1000000000000000]
 				InstructionLetter = File[0:1]
@@ -178,21 +181,21 @@ while True:
 					InstructionString = InstructionString + "L11 "
 				else:
 					BitString = BitString + "0"
-				print(BitString)
+				print (BitString)
 			else:
-				print(color.red + "Number Is Too Big, Exiting SET" + color.white)
+				print (color.red + "Number Is Too Big, Exiting set" + color.white)
 			BitString = ""
 		case "uin":
-			print("User Input")
+			print ("User Input")
 			InstructionString = InstructionString + "L14 "
 		case "out":
-			print("Output")
+			print ("Output")
 			InstructionString = InstructionString + "L15 "
 		case "stop":
-			print("stop the program counter")
+			print ("stop the program counter")
 			InstructionString = InstructionString + "L16 "
 		case "jmp":
-			print("Jump")
+			print ("Jump")
 			if Executed == True:
 				File = File[1:1000000000000000]
 				InstructionLetter = File[0:1]
@@ -241,23 +244,23 @@ while True:
 				else:
 					BitString = BitString + "0"
 			else:
-				print(color.red + "Number Is Too Big, Exiting JMP" + color.white)
-			print(BitString)
+				print (color.red + "Number Is Too Big, Exiting jmp" + color.white)
+			print (BitString)
 			BitString = ""
 		case "cmp":
-			print("If A=B")
+			print ("If A=B")
 			InstructionString = InstructionString + "R7 "
 		case "call":
-			print("jump and save a return address")
+			print ("jump and save a return address")
 			InstructionString = InstructionString + "R8 "
 		case "return":
-			print("Jump To Return Address")
+			print ("Jump To Return Address")
 			InstructionString = InstructionString + "R9 "
 		case "ldr":
-			print("Load Adder Result")
+			print ("Load Adder Result")
 			InstructionString = InstructionString + "R10 "
 		case "lda":
-			print("Register A Read")
+			print ("Register A Read")
 			if Executed == True:
 				File = File[1:1000000000000000]
 				InstructionLetter = File[0:1]
@@ -287,12 +290,12 @@ while True:
 					InstructionString = InstructionString + "R11 "
 				else:
 					BitString = BitString + "0"
-				print(BitString)
+				print (BitString)
 				BitString = ""
 			else:
-				print(color.red + "Number Is Too Big, Exiting LDA" + color.white)
+				print (color.red + "Number Is Too Big, Exiting lda" + color.white)
 		case "ldb":
-			print("Register B Read")
+			print ("Register B Read")
 			if Executed == True:
 				File = File[1:1000000000000000]
 				InstructionLetter = File[0:1]
@@ -322,12 +325,19 @@ while True:
 					InstructionString = InstructionString + "R14 "
 				else:
 					BitString = BitString + "0"
-				print(BitString)
+				print (BitString)
 				BitString = ""
 			else:
-				print(color.red + "Number Is Too Big, Exiting LDB" + color.white)
+				print (color.red + "Number Is Too Big, Exiting ldb" + color.white)
 		case _:
-			print(color.red + "Unknown Instruction" + color.white)
+			print (color.red + "Unknown Instruction" + color.white)
 			UnknownInstructions = UnknownInstructions + 1
-			if UnknownInstructions >= 10:
+			if UnknownInstructions >= 10000:
+				print ("")
+				print ("You have more than 10.000 Errors, the assembler is stopping")
+				print ("Make sure your code has the word \"done\" at the end like in this example:")
+				print ("")
+				print ("include 1 set 1 ;")
+				print ("lda 1 ldb 1 ldr out stop")
+				print ("done")
 				break
