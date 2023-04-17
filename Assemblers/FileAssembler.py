@@ -74,6 +74,7 @@ while True:
 			print (color.white + "Type " + color.green + "\"ldr\"" + color.white + " to read the result of the current or last calculation")
 			print (color.white + "Type " + color.green + "\"lda\"" + color.white + " to read the selected register as A")
 			print (color.white + "Type " + color.green + "\"ldb\"" + color.white + " to read the selected register as B")
+			print (color.white + "Type " + color.green + "\"#\"" + color.white + " to make a comment, end the comment with \"#\"")
 		case "view":
 			print (InstructionString)
 		case ";":
@@ -330,7 +331,6 @@ while True:
 			else:
 				print (color.red + "Number Is Too Big, Exiting ldb" + color.white)
 		case "#":
-			print ("HHHHHHHHHHHH")
 			File = File[1:1000000000000000]
 			InstructionLetter = File[0:1]
 			while InstructionLetter != "#":
