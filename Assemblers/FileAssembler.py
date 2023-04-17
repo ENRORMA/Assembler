@@ -329,6 +329,15 @@ while True:
 				BitString = ""
 			else:
 				print (color.red + "Number Is Too Big, Exiting ldb" + color.white)
+		case "#":
+			print ("HHHHHHHHHHHH")
+			File = File[1:1000000000000000]
+			InstructionLetter = File[0:1]
+			while InstructionLetter != "#":
+				File = File[1:1000000000000000]
+				InstructionLetter = File[0:1]
+			File = File[1:1000000000000000]
+			InstructionLetter = File[0:1]
 		case _:
 			print (color.red + "Unknown Instruction" + color.white)
 			UnknownInstructions = UnknownInstructions + 1
