@@ -1,4 +1,4 @@
-# this assembler will not be continued, use assembler 2 instead
+# this assembler will not be continued, use Oxygen instead
 
 # usage
   bash Assembler.sh YOURFILE to assemble the file (your file cant have a space in it)
